@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --purple500: #281154;
+  --purple300: #270082;
+  --purple600: #1b0058;
+  --red600: #dc0000;
+  --body: #f9f6ff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: var(--body);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: var(--purple300);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid white;
+}
+/* ========== FULL PAGE BACKGROUND ========== */
+body {
+  margin: 0;
+  line-height: 1.6;
+
+  background-image: url("images/&.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* ========== HERO ========== */
+.hero-section {
+  position: relative;
+  height: 100vh;
+
+  /* 🔥 change path if needed */
+  background-image: url("images/mu.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* dark overlay (makes text visible) */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* content above overlay */
+.hero-content {
+  position: relative;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.hero-content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+/* ========== SECTIONS ========== */
+.music-section {
+  background: var(--purple500);
+  color: white;
+  padding: 60px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.about-music {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.video-section {
+  background: url("images/S.jpg") center/cover no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+/* ========== BUTTONS ========== */
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.primary-btn {
+  background: var(--red600);
+  color: white;
+}
+
+.secondary-btn {
+  background: var(--purple300);
+  color: white;
+}
+
+/* ========== GIFT ========== */
+.gift-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.gift-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ========== FOOTER ========== */
+.footer-upper {
+  background: var(--purple600);
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.footer-lower {
+  background: var(--purple300);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .gift-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: 48px;
+  }
+}
